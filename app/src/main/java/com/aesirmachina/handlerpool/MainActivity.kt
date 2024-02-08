@@ -98,13 +98,19 @@ class MainActivity : ComponentActivity() {
                 /* capture logs with the delay and without the delay and it's possible to see the
                  * influence of the scheduler.
                  */
-                delay+=10
+                delay+=100
             }
         }
 
     }
 
     class MyHandlerPool(ctx: Context, poolSize: Int) : HandlerPool(ctx, poolSize){
+
+        /*
+         * Different makes of android can destroy and garbage collect an activity at different
+         * times. These lifecycle hit counts indicate when that happens. They are reset to 0
+         * whenever a new main activity is created by the Java VM.
+         */
         var countOnCreate = 0
         var countOnDestroy = 0
         var countOnPause = 0
