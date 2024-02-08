@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-}
+}78
 
 android {
     namespace = "com.aesirmachina.handlerpool"
@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.aesirmachina:handlerpool:0.1")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
