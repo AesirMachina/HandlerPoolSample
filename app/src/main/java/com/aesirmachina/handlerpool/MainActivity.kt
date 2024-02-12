@@ -19,6 +19,15 @@ import com.aesirmachina.handler.HandlerPool
 import com.aesirmachina.handler.HandlerPool.HandlerPoolFactory
 import com.aesirmachina.handler.HandlerPoolCallback
 import com.aesirmachina.handlerpool.ui.theme.HandlerPoolSampleTheme
+import kotlinx.coroutines.CoroutineName
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 class MainActivity : ComponentActivity() {
     companion object{
@@ -26,6 +35,7 @@ class MainActivity : ComponentActivity() {
     }
 
     var pool: HandlerPool? = null
+    private val mutex = Mutex()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,10 +49,12 @@ class MainActivity : ComponentActivity() {
         })
 
         builder.callback = object : HandlerPoolCallback {
-            override fun handleMessage(ctx: Context, msg: Message) {
-                Log.i(LOG_TAG,
-                    "handleMessage:${msg.arg1+100}:${Thread.currentThread().name}:${SystemClock.elapsedRealtimeNanos()}");
 
+            override fun  handleMessage(ctx: Context, msg: Message) {
+                Log.i(
+                    LOG_TAG,
+                    "handleMessage:${msg.arg1 + 100}:${Thread.currentThread().name}:${SystemClock.elapsedRealtimeNanos()}"
+                );
             }
 
             override fun onWarn(ctx: Context, msg: Message, duration: Long) {
@@ -82,6 +94,8 @@ class MainActivity : ComponentActivity() {
         super.onResume();
         var delay = 0L
         pool?.let{
+
+            // process some messages
             for (i in 1..100){
                 val m = Message();
                 m.arg1 = i
@@ -98,7 +112,7 @@ class MainActivity : ComponentActivity() {
                 /* capture logs with the delay and without the delay and it's possible to see the
                  * influence of the scheduler.
                  */
-                delay+=100
+                // delay+=100
             }
         }
 
@@ -121,7 +135,6 @@ class MainActivity : ComponentActivity() {
             super.onCreate(owner)
             Log.i(LOG_TAG,
                 "pool onCreate:${countOnCreate++}:${Thread.currentThread().name}:${SystemClock.elapsedRealtimeNanos()}");
-
         }
 
         override fun onDestroy(owner: LifecycleOwner) {
