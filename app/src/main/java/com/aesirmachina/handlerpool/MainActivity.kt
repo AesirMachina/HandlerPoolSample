@@ -1,3 +1,19 @@
+/*
+ * Copyright 2024 Aesir Machina Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.aesirmachina.handlerpool
 
 import android.content.Context
@@ -19,15 +35,8 @@ import com.aesirmachina.handler.HandlerPool
 import com.aesirmachina.handler.HandlerPool.HandlerPoolFactory
 import com.aesirmachina.handler.HandlerPoolCallback
 import com.aesirmachina.handlerpool.ui.theme.HandlerPoolSampleTheme
-import kotlinx.coroutines.CoroutineName
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
+
 
 class MainActivity : ComponentActivity() {
     companion object{
@@ -40,6 +49,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // format the logcat output so that it can be imported into a spreadsheet.
+        Log.i(LOG_TAG, "event:count:thread:nanotime");
+        
         val builder = HandlerPool.Builder(applicationContext)
         builder.poolSize(5);
         builder.lifecycleOwner = this
@@ -72,8 +84,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // format the logcat output so that it can be imported into a spreadsheet.
-        Log.i(LOG_TAG, "event:count:thread:nanotime");
+
         pool = builder.build();
 
 
