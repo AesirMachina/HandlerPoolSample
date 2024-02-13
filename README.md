@@ -36,6 +36,7 @@ Handler Pool Library is a solution that attempts to solve all of these problems.
 2. lifecycle awareness. Handler Pool is attached to a ```LicecycleOwner``` and your work tasks are notified of lifecycle changes as they occur. THis allows you to pause when ```onPause``` is called and resume it when ```onResume``` is called, for example.
 3. reverse traceability. Handler Pool encourages you to define work in small, well defined blocks of functionality, which can be spotted easily by anyone on the team and architects as well.
 4. performance notificaitons. Handler Pool executes callbacks for tasks that take too long based on three levels: performance warning, performance critical, and performance failure.
+5. runtime determinism. Background tasks can be chained together just like they can be with ```Work Manager```.
 
 
 ## Some Related Links
