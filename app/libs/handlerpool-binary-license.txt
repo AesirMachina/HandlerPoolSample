@@ -1,0 +1,116 @@
+AESIR MACHINA SOFTWARE BINARY LICENSE TERMS
+HANDLER POOL LIBRARY VERSION 1.0
+
+                                                                                 February 2024
+
+These license terms are an agreement between Aesir Machina Corporation (AKA "Machina") and you.
+Please read them. They apply to the software named above, which includes the media on which you
+received it, if any. The terms also apply to any :
+
+    * updates,
+    * supplements,
+    * Internet-based services, and
+    * support services
+
+for this software, unless other terms accompany those items. If so, those terms apply.
+By using the software, you accept these terms. If you do not accept them, do not use the software.
+If you comply with these license terms, you have the perpetual rights below.
+
+    1. INSTALLATION AND USE RIGHTS. You may install and use any number of copies of the Handler
+       Pool library software in binary form on Android devices for use with your Android programs.
+
+    2. MODIFICATION. You may not modify any files contained in the software.
+
+    3. ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
+
+        a. Distributable. You are permitted to distribute the library with Android applications you
+           develop if you comply with the terms below.
+
+            i. Redistributable ARR files. You may copy and distribute the binaries released by
+               Aesir Machina that begin with the name "handlerpool".
+
+            ii. All versions of the handler pool released prior to this license are covered
+                under this license. For example all ARR files that match the following wildcard
+                name: handlerpool*.aar
+            iii. Third Party Distribution. You may permit distributors of your programs to copy and
+                 distribute the compiled AAR files as part of those programs.
+
+            iv. Distribution Requirements. For any Distributable Code you distribute, you must
+
+                * add significant primary functionality to it in your programs;
+                * require distributors and external end users to agree to terms that protect it at
+                  least as much as this agreement;
+                * display your valid copyright notice on your programs; and
+                * indemnify, defend, and hold harmless Microsoft from any claims, including
+                  attorneys’ fees, related to the distribution or use of your programs.
+            v. Distribution Restrictions. You may not
+
+                * alter any copyright, trademark or patent notice in the Distributable Code;
+                * use Machina’s trademarks in your programs’ names or in a way that suggests your
+                  programs come from or are endorsed by Machina;
+                * distribute Distributable Code to run on a platform other than the Android
+                  platform;
+                * include Distributable Code in malicious, deceptive or unlawful programs; or
+                * modify or distribute the source code of any Distributable Code so that any part of
+                  it becomes subject to an Excluded License. An Excluded License is one that
+                  requires, as a condition of use, modification or distribution, that
+                    - the code be disclosed or distributed in source code form; or
+                    - others have the right to modify it.
+
+    4. SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you some
+       rights to use the software. Aesir Machina reserves all other rights. Unless applicable law
+       gives you more rights despite this limitation, you may use the software only as expressly
+       permitted in this agreement. In doing so, you must comply with any technical limitations in
+       the software that only allow you to use it in certain ways. You may not
+
+        * disclose the results of any benchmark tests of the software to any third party without
+          Aesir Machina’s prior written approval;
+        * work around any technical limitations in the software;
+        * reverse engineer, decompile or disassemble the software, except and only to the extent
+          that applicable law expressly permits, despite this limitation;
+        * make more copies of the software than specified in this agreement or allowed by applicable
+          law, despite this limitation;
+        * publish the software for others to copy;
+        * rent, lease or lend the software; or
+        * transfer the software or this agreement to any third party.
+
+    6. BACKUP COPY. You may make one backup copy of the software. You may use it only to reinstall
+       the software.
+
+    7. DOCUMENTATION. Any person that has valid access to your computer or internal network may copy
+       and use the documentation for your internal, reference purposes.
+
+    8. EXPORT RESTRICTIONS. You agree to not export the software outside the united states in any
+       form.  In addition, the software is subject to United States export laws and regulations.
+       You must comply with all domestic and international export laws and regulations that apply
+       to the software. These laws include restrictions on destinations, end users and end use.
+
+    9. SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for
+       it. Any support or services provided, including issue tracking and bug fixing, shall be at
+       the discretion of Aesir Machina.
+
+    10. ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, and support
+        services that you use, are the entire agreement for the software and support services.
+
+    11. APPLICABLE LAW.
+
+        a. United States. If you acquired the software in the United States, Washington state law
+           governs the interpretation of this agreement and applies to claims for breach of it,
+           regardless of conflict of laws principles. The laws of the state where you live govern
+           all other claims, including claims under state consumer protection laws, unfair
+           competition laws, and in tort.
+
+        b. Outside the United States. If you acquired the software in any other country, this
+           this license invalid and you do not have the right to use, read or distribute the
+           software.
+
+    12. LEGAL EFFECT. This agreement describes certain legal rights. You may have other rights
+        under the laws of your country. You may also have rights with respect to the party from
+        whom you acquired the software. This agreement does not change your rights under the laws of
+        your country if the laws of your country do not permit it to do so.
+
+    13. DISCLAIMER OF WARRANTY. The software is licensed “as-is.” You bear the risk of using it.
+        Aesir Machina gives no express warranties, guarantees or conditions. You may have additional
+        consumer rights or statutory guarantees under your local laws which this agreement cannot
+        change. To the extent permitted under your local laws, Aesir Machina excludes the implied
+        warranties of merchantability, fitness for a particular purpose and non-infringement.
