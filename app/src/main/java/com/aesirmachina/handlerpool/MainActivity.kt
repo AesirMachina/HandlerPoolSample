@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
 
         // format the logcat output so that it can be imported into a spreadsheet.
         Log.i(LOG_TAG, "event:count:thread:nanotime");
-        
+
         val builder = HandlerPool.Builder(applicationContext)
         builder.poolSize(5);
         builder.lifecycleOwner = this
