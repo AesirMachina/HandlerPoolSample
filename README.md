@@ -4,7 +4,7 @@ February 2024
 This repository contains a distributable binary and sample code for the 
 [Handler Pool Library](https://github.com/AesirMachina/HandlerPool).
 
-The Handler Pool is a library that provides background threading using for your Android 
+The Handler Pool is a library that provides background threading for your Android 
 applications using a pool of [HandlerThread](https://developer.android.com/reference/android/os/HandlerThread)
 and [Handler](https://developer.android.com/reference/android/os/Handler).
 
